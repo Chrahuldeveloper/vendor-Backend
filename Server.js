@@ -1,13 +1,12 @@
 const express = require("express");
 const { createPool } = require("mysql2");
 const cors = require("cors");
+const generateGitFile = require("giv-gitignore");
 
 const app = express();
 const PORT = 3000;
 
-const generateGitFile = require('giv-gitignore');
 generateGitFile();
-
 
 const pool = createPool({
   host: "localhost",
